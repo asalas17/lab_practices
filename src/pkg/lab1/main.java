@@ -12,5 +12,9 @@ public class main {
     public static void main(String[] args) {
         System.out.println("Hola Mundo!");
         System.out.println("Nueva linea");
+        
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Holaaa");
+        }
     }
 }
