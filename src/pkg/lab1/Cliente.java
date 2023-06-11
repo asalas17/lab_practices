@@ -6,13 +6,8 @@ package pkg.lab1;
 
 /**
  *
- * @author Andres
+ * @author MARIA VALERIA J
  */
-public class main {
-    public static void main(String[] args) {
-        
-        System.out.println("");
-        System.out.println("");
-    
-    }
+public class Cliente {
+    int[] productos = {10, 20, 30, 40};
 }
