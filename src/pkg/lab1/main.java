@@ -21,6 +21,7 @@ public class main {
         vendedor_2.setNombre("Gabriela");
         
         vendedor_1.start();
+        vendedor_1.join();
         vendedor_2.start();
         vendedor_2.join();
         Cliente_1.start();

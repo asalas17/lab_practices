@@ -24,13 +24,22 @@ public class Cliente extends Thread {
     }
 
     public void run() {
-        long t1 = System.currentTimeMillis();
-        // aquí el proceso que quieres medir cuanto tarda
-        long t2 = System.currentTimeMillis();
+        long tiempoInicio = System.currentTimeMillis();
 
         for (int i = 1; i < getProductos() + 1; i++) {
-            System.out.println("Procesado el producto " + i + " del cliente " + nombre + " -> Tiempo: " + (t2 - t1) / 1000.0);
+
+            try {
+                int rand = (int) (Math.random() * 5000);
+                Thread.sleep(rand);
+            } catch (Exception e) {
+            }
+            
+            long tiempoFinal = System.currentTimeMillis();
+            long tiempoEjecucion = (tiempoFinal - tiempoInicio) / 1000;
+            System.out.println("Procesado el producto " + i + " del cliente " + nombre + " -> Tiempo: " + tiempoEjecucion + " segundos.");
         }
-        System.out.println("El vendedor " + vendedor + " HA TERMINADO DE PROCESAR " + nombre + " EN EL TIEMPO: ");
+            long tiempoFinal = System.currentTimeMillis();
+            long tiempoEjecucion = (tiempoFinal - tiempoInicio) / 1000;
+        System.out.println("El vendedor " + vendedor + " HA TERMINADO DE PROCESAR " + nombre + " EN EL TIEMPO: " + tiempoEjecucion + " segundos");
     }
 }

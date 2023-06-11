@@ -8,10 +8,10 @@ package pkg.lab1;
  *
  * @author MARIA VALERIA J
  */
-public class Vendedor extends Thread{
+public class Vendedor extends Thread {
+
     String nombre;
     String clienteAsignado;
-    
 
     public String getNombre() {
         return nombre;
@@ -20,14 +20,12 @@ public class Vendedor extends Thread{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    
-    public Vendedor(String clienteAsignado){
+
+    public Vendedor(String clienteAsignado) {
         this.clienteAsignado = clienteAsignado;
     }
-    
-    public void run(){
-        long segundos = System.currentTimeMillis()-(System.currentTimeMillis()/1000);
-        System.out.println("El vendedor " + getNombre() + " COMIENZA A PROCESAR LA COMPRA DEL CLIENTE " + clienteAsignado + " EN EL TIEMPO: " + segundos);
+
+    public void run() {
+        System.out.println("El vendedor " + getNombre() + " COMIENZA A PROCESAR LA COMPRA DEL CLIENTE " + clienteAsignado + " EN EL TIEMPO: " + 0 + " segundos");
     }
 }
